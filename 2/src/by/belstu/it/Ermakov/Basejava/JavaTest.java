@@ -205,10 +205,10 @@ System.out.println(oldchar+newchar);
         System.out.println("String в bool by parseBoolean ="+bool1 );
         //c использованием метода valueOf
         boolean1 = Boolean.valueOf(s34);
-        System.out.println("String в bool by vaalueof ="+ boolean1 );
+        System.out.println("String в bool by vaalueof ="+ boolean1 );//возрващает объект булеан
 
         String string1 = "привет";
-        String string2 = "привет";
+        String string2 = "приветыы";
         System.out.println(string1==string2);
         System.out.println("Equals? "+string1.equals(string2));
         System.out.println("CompareTo = "+string1.compareTo(string2)); //выведет 0, так как строки идентичны
