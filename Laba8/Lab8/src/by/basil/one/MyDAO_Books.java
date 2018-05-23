@@ -3,6 +3,7 @@ package by.basil.one;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class MyDAO_Books implements IGenDAO<Books, Integer> {
     public final Connection connection;
@@ -51,8 +52,12 @@ public class MyDAO_Books implements IGenDAO<Books, Integer> {
 
 
     public List<Books> deleteBooks() throws SQLException {
+
         Statement st = connection.createStatement();
-        String sql = "delete from books where released < '1904'\n" +
+        Scanner in = new Scanner(System.in);
+        System.out.print("Введите имя: ");
+        int year = in.nextInt();
+        String sql = "delete from books where released < " + "'"+ year +"'" +
                 "SELECT  * from books;" ;
         PreparedStatement stm = connection.prepareStatement(sql);
         ResultSet rs = stm.executeQuery();

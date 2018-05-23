@@ -18,8 +18,6 @@ public class Trans {
             Connection connection = null;
             Statement statement = null;
 
-
-
             connection = DriverManager.getConnection(DATABASE_URL);
             connection.setAutoCommit(false);
 
@@ -44,10 +42,10 @@ public class Trans {
             Savepoint savepointOne = connection.setSavepoint("SavepointOne");
 
             try {
-                SQL = "INSERT INTO author VALUES ('Пушкин','Россия')";
+                SQL = "INSERT INTO author VALUES ('qweqwe','Россия')";
                 statement.executeUpdate(SQL);
 
-                SQL = "INSERT INTO author VALUES ( 'Лермонтов', 'Россия')";
+                SQL = "INSERT INTO author VALUES ( 'qweqweqwq', 'Россия')";
                 statement.executeUpdate(SQL);
 
                 connection.commit();
