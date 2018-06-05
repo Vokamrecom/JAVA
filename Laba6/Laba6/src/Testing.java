@@ -64,7 +64,7 @@ public class Testing {
     //timeout
     @Test(timeOut = 100)
     public void waitLongTime() throws Exception {
-        Thread.sleep(1011);
+        Thread.sleep(10);
         System.out.println("Ignored");
     }
     //groups
